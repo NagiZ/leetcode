@@ -2,7 +2,7 @@
  * @param {number[][]} triangle
  * @return {number}
  */
-//dp
+//dp 自顶向下 O(n^2) 空间复杂度
 var minimumTotal = function(triangle) {
     let dp = []
     dp[0] = [triangle[0][0]]
@@ -25,4 +25,17 @@ var minimumTotal = function(triangle) {
     	ans = Math.min(sum, ans)
     }
     return ans
+};
+
+//dp 自底向上 O(n) 空间复杂度
+var minimumTotal = function(triangle) {
+    let dp = triangle[triangle.length - 1]
+    if (triangle.length >= 2) {
+        for (let i = triangle.length - 2; i >= 0; i--) {
+            for (let j = 0; j <= i; j++) {
+                dp[j] = Math.min(dp[j], dp[j + 1]) + triangle[i][j]
+            }
+        }
+    }
+    return dp[0]
 };
