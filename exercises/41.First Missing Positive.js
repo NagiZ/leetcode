@@ -1,4 +1,4 @@
-// Solution 1:
+// Solution 1: 
 var firstMissingPositive = function(nums) {
     if(nums.length == 0){
         return 1;
