@@ -1,6 +1,6 @@
 //Solution:
 /**
- * @param {string} s
+ * @param {string} s 
  * @param {number} numRows
  * @return {string}
  */
