@@ -1,4 +1,4 @@
-// Solution:
+// Solution: 
 var findMedianSortedArrays = function(nums1, nums2) {
     var arr = comp(nums1, nums2, 0, 0);
     return arr.length%2 ? arr[parseInt((arr.length - 1)/2)] : (arr[arr.length/2] + arr[(arr.length/2) - 1])/2;
