@@ -1,6 +1,6 @@
 /**
  * @param {string} s
- * @return {number}
+ * @return {number} 
  */
 var lengthOfLongestSubstring = function(s) {
     var map = new Map(),
