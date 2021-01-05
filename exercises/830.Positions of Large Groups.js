@@ -20,3 +20,27 @@ var largeGroupPositions = function(S) {
     }
     return result
 };
+
+
+/**
+ * 
+ */
+var largeGroupPositions = function(s) {
+    var ans = [],
+        g = 0
+    for (var i = 1, l = s.length; i < l; i++) {
+        if (s.charAt(i) !== s.charAt(i - 1) || i === l - 1) {
+            let d = i - g
+            let tag = s.charAt(i) === s.charAt(i - 1) && i === l - 1
+            if (tag) {
+                d ++
+            }
+            if (d >= 3) {
+                let r = tag? i : i - 1
+                ans.push([g, r])
+            }
+            g = i
+        }
+    }
+    return ans
+};
