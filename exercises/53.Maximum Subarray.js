@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-//dp
+//dp 维护以 nums[i] 结尾的连续子数组的最大值
 var maxSubArray = function(nums) {
     let ans = nums[0],
     	temp = 0

@@ -8,6 +8,7 @@ var trap = function(height) {
         min = height[0],
         minIndex = 0;
     for(var i = 1; i < len; i++){
+        //在遍历的过程中可以直接得到每一步的train结果
         if (height[i] >= min) {
             for(var j = minIndex + 1; j < i; j++){
                 train += min - height[j];
